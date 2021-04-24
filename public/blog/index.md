@@ -8,37 +8,8 @@
 
     </head>
     <body>
-        <br />
-<div class="centered header">
-    <a href="/">
-        WWW.JanPaul.COM.NET.BIZ/janpaulthoughts
-    </a>
-</div>
-<br />
-<br />
-<br />
-<br />
-         <div class="centered">
-<p></p>
+        WWW.JanPaul.COM.NET.BIZ/janpaulthoughts<br /><br /><br /><br />
+        <p>Blog coming soon!</p>
 
-<h1>Blog coming soon!</h1>
-
-<h2>Blog coming soon!</h2>
-
-<h3>Blog coming soon!</h3>
-
-<p></p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p></p>
-
-<p>btw, the blog is coming soon</p>
-
-<p></p>
-
- </div>
     </body>
 </html>

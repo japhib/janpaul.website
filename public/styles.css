@@ -1,3 +1,46 @@
 body {
     font-family: 'Ubuntu Mono', monospace;
+    background-color: #234;
+    color: #b0b0b0;
+    margin: 0px;
+}
+
+h1 {
+    background-color: #012;
+    padding: 20px 0px;
+}
+
+h2 {
+    background-color: #081828;
+    padding: 20px 0px;
+}
+
+h3 {
+    background-color: #162636;
+    padding: 20px 0px;
+}
+
+.text {
+    margin: 30px;
+}
+
+.centered {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.header {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(252, 196, 130);
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
 }
