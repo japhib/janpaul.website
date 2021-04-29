@@ -1,5 +1,7 @@
 body {
     font-family: 'Ubuntu Mono', monospace;
+    font-size: 20px;
+
     background-color: #234;
     color: #b0b0b0;
     margin: 0px;
@@ -7,21 +9,25 @@ body {
 
 h1 {
     background-color: #012;
-    padding: 20px 0px;
+    padding: 1em;
 }
 
 h2 {
     background-color: #081828;
-    padding: 20px 0px;
+    padding: 1em;
 }
 
 h3 {
     background-color: #162636;
-    padding: 20px 0px;
+    padding: 1em;
+}
+
+p {
+    margin: 1.5em;
 }
 
 .text {
-    margin: 30px;
+    margin: 1.5em;
 }
 
 .centered {
@@ -31,7 +37,7 @@ h3 {
 }
 
 .header {
-    margin-top: 20px;
+    margin-top: 1em;
     margin-bottom: 50px;
 }
 
@@ -42,5 +48,52 @@ a {
 
 a:hover {
     color: white;
-    text-decoration: underline;
+}
+
+img {
+    /* center it */
+    display: block;
+    margin: 0px auto;
+}
+
+button:hover {
+    cursor: pointer;
+}
+button.run_game_btn {
+    height: auto;
+    padding: 0.4em 0.8em;
+    white-space: nowrap;
+    font-size: 120%;
+    display: block;
+    margin: .8em auto;
+    background-color: #369;
+    color: #b0b0b0;
+
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    border-radius: 10px;
+
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+button.run_game_btn svg {
+    margin-right: .5em;
+}
+
+a.rungame {
+    width: auto;
+}
+img.rungame {
+    filter: brightness(90%);
+}
+a.rungame:hover img {
+    filter: brightness(100%);
+}
+a.rungame:hover button.run_game_btn {
+    background-color: #48b;
+    color: #f0f0f0;
+    text-decoration: none;
 }

@@ -2,16 +2,14 @@
 
 # this is the website of JanPaul
 
-&nbsp;
+// <img src="/img/profile.jpg" style="width: 30%" />
 
 💻 Backend developer 🤓
-
 by day, 
 
 &nbsp;
 
 🔥🥷🏻 GAME DEVELOPER 🤯🔥
-
 by 🌜 night 🦇
 
 &nbsp;

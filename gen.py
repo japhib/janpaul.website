@@ -3,6 +3,17 @@ import chevron
 import markdown2
 import re
 
+rungamebutton = """
+<button class="button run_game_btn">
+    <svg stroke-linecap="round" stroke="currentColor" class="svgicon icon_play" role="img" version="1.1"
+        viewBox="0 0 24 24" stroke-width="2" height="24" stroke-linejoin="round" aria-hidden="" fill="none" width="24">
+        <circle cx="12" cy="12" r="10"></circle>
+        <polygon points="10 8 16 12 10 16 10 8"></polygon>
+    </svg>
+    Run game
+</button>
+"""
+
 def readfile(filename):
     with open(filename, 'r') as file:
         return file.read()
@@ -26,9 +37,12 @@ for filename in allfiles:
     # convert markdown to html
     # ... or, lines starting with // are kept as-is
     converted_lines = []
-    for line in file_lines:
+    for line in file_lines:        
         if line.startswith("//"):
             converted_lines.append(line[2:])
+        elif "{rungame}" in line:
+            # special code {rungame} turns into "Run Game" button
+            converted_lines.append(re.sub(r'\{rungame\}', rungamebutton, line))
         else:
             converted_lines.append(markdown2.markdown(line))
     file_contents = "\n".join(converted_lines)
