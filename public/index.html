@@ -10,10 +10,9 @@
     function externalLinksTargetBlank() {
         // links to external sites should open in a new tab/window
         var links = document.links;
-        var currentWebsite = new RegExp(location.host);
         for (var i = 0; i < links.length; i++) {
             var link = links[i];
-            if (!currentWebsite.test(link.href)) {
+            if (!link.href.includes(location.host)) {
                 link.target = "_blank";
             }
         }
