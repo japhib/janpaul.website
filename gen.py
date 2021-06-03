@@ -23,7 +23,6 @@ head = readfile("layout/head.html")
 header = readfile("layout/header.html")
 
 context = {
-    'head': head,
     'header': header
 }
 
@@ -34,21 +33,62 @@ for filename in allfiles:
 
     file_lines = readfile(filename).split('\n')
 
+
     # convert markdown to html
-    # ... or, lines starting with // are kept as-is
     converted_lines = []
-    for line in file_lines:        
-        if line.startswith("//"):
+    in_frontmatter = False
+    frontmatter = {}
+    for line in file_lines:
+        # -- signals start or end of frontmatter section
+        if line.startswith("--"):
+            in_frontmatter = not in_frontmatter
+
+        # parse frontmatter keys like title, date, draft status
+        elif in_frontmatter:
+            items = line.split(': ')
+            key = items[0]
+            val = items[1]
+            frontmatter[key] = val
+
+        # lines starting with // are kept as-is
+        elif line.startswith("//"):
             converted_lines.append(line[2:])
+
+        # special code {rungame} turns into "Run Game" button
         elif "{rungame}" in line:
-            # special code {rungame} turns into "Run Game" button
             converted_lines.append(re.sub(r'\{rungame\}', rungamebutton, line))
+
+        # everything else is markdown translated to html
         else:
             converted_lines.append(markdown2.markdown(line))
-    file_contents = "\n".join(converted_lines)
 
-    # render it as "content" in the template
+    file_contents = "\n".join(converted_lines)
     context["content"] = file_contents
+
+    # parse title from frontmatter
+    if 'title' in frontmatter:
+        context["title"] = '<div class="page-title">' + frontmatter['title'] + '</div>'
+        context["head_title"] = ' - ' + frontmatter['title']
+    else:
+        context["title"] = ''
+        context["head_title"] = ''
+
+    # parse date from frontmatter
+    if 'date' in frontmatter:
+        context["date"] = 'Published on: ' + frontmatter['date']
+    else:
+        context["date"] = ''
+
+    # parse description from frontmatter
+    if 'description' in frontmatter:
+        context["description"] = '<div class="centered">' + frontmatter['description'] + '</div>'
+    else:
+        context["description"] = ''
+
+    # render context into the head of the template (template within a template)
+    context['head'] = chevron.render(head, context)
+    
+    # now actually render
     rendered = chevron.render(template, context)
 
     # remove "src/" from beginning of filename

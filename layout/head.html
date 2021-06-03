@@ -1,5 +1,19 @@
 <meta charset="utf-8"/>
-<title>WWW.JanPaul.COM.NET.BIZ/janpaulthoughts - {{ title }}</title>
+<title>WWW.JanPaul.COM.NET.BIZ/janpaulthoughts{{ head_title }}</title>
 <link rel="preconnect" href="https://fonts.gstatic.com"> 
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Ubuntu+Mono&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css" />
+
+<script>
+    function externalLinksTargetBlank() {
+        // links to external sites should open in a new tab/window
+        var links = document.links;
+        var currentWebsite = new RegExp(location.host);
+        for (var i = 0; i < links.length; i++) {
+            var link = links[i];
+            if (!currentWebsite.test(link.href)) {
+                link.target = "_blank";
+            }
+        }
+    }
+</script>
