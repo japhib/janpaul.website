@@ -1,11 +1,12 @@
 <meta charset="utf-8"/>
 <title>WWW.JanPaul.COM.NET.BIZ/janpaulthoughts{{ head_title }}</title>
 <link rel="preconnect" href="https://fonts.gstatic.com"> 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css" />
 
 <script>
-    function externalLinksTargetBlank() {
+    function onPageLoad() {
         // links to external sites should open in a new tab/window
         var links = document.links;
         for (var i = 0; i < links.length; i++) {
@@ -13,6 +14,11 @@
             if (!link.href.includes(location.host)) {
                 link.target = "_blank";
             }
+        }
+
+        // set color of <hr>
+        for (let element of document.getElementsByTagName('hr')) {
+            element.color = '#765';
         }
     }
 </script>

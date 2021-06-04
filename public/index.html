@@ -3,11 +3,12 @@
         <meta charset="utf-8"/>
 <title>WWW.JanPaul.COM.NET.BIZ/janpaulthoughts</title>
 <link rel="preconnect" href="https://fonts.gstatic.com"> 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css" />
 
 <script>
-    function externalLinksTargetBlank() {
+    function onPageLoad() {
         // links to external sites should open in a new tab/window
         var links = document.links;
         for (var i = 0; i < links.length; i++) {
@@ -16,28 +17,34 @@
                 link.target = "_blank";
             }
         }
+
+        // set color of <hr>
+        for (let element of document.getElementsByTagName('hr')) {
+            element.color = '#765';
+        }
     }
 </script>
     </head>
-    <body onload="externalLinksTargetBlank()">
+    <body onload="onPageLoad()">
         <br />
 <div class="centered header">
     <a href="/">
         WWW.JanPaul.COM.NET.BIZ/janpaulthoughts
     </a>
     <div class="centered" style="margin-top: 20px;">
-        <span class="headerlinks"><a href="/about.html">about</a></span>
-        <span class="headerlinks"><a href="/list_of_games.html">games</a></span>
-        <span class="headerlinks"><a href="/blog">blog</a></span>
+        <!-- <span class="headerlinks"><a href="/about.html">about</a></span> -->
+        <!-- <span class="headerlinks"><a href="/list_of_games.html">games</a></span> -->
+        <span class="headerlinks"><a href="/blog/ultimate-game-engine.html">blog</a></span>
     </div>
 </div>
 
         
         
-         <div class="centered">
+        
+        <div class="content"> <div class="centered">
 <p></p>
 
-<h1>this is the website of JanPaul</h1>
+<h1>Jan's web site title</h1>
 
 <p></p>
 
@@ -64,6 +71,13 @@
 
 <p></p>
 
+ <div class="centered" style="margin-top: 1em; font-size: .6em">I hear the cool kids like emojis</div>
+<p></p>
+
+<p>&nbsp;</p>
+
+<p></p>
+
 <h3>Welcome to the digital projection of my corporeal being</h3>
 
 <p></p>
@@ -76,26 +90,25 @@
 
 <p></p>
 
-<p>Click --> <a href="blog">here</a> &lt;-- for assorted ramblings</p>
+ <!-- Click -- > [here](blog) <-- for assorted ramblings -->
+<p></p>
+
+ <!-- or -- > [here](list_of_games.html) <-- for a list of my life's accomplishments -->
+<p></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
 
 <p></p>
 
-<p>or --> <a href="list_of_games.html">here</a> &lt;-- for a list of my life's accomplishments</p>
-
-<p></p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p></p>
-
- </div>
+ </div></div>
+        
     </body>
 </html>

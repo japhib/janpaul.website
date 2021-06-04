@@ -1,6 +1,6 @@
 // <div class="centered">
 
-# this is the website of JanPaul
+# Jan's web site title
 
 // <img src="/img/profile.jpg" style="width: 30%" />
 
@@ -14,6 +14,10 @@ by 🌜 night 🦇
 
 &nbsp;
 
+// <div class="centered" style="margin-top: 1em; font-size: .6em">I hear the cool kids like emojis</div>
+
+&nbsp;
+
 ### Welcome to the digital projection of my corporeal being
 
 // <div class="centered">I hope it's nice</div>
@@ -21,9 +25,9 @@ by 🌜 night 🦇
 
 &nbsp;
 
-Click --> [here](blog) <-- for assorted ramblings
+// <!-- Click -- > [here](blog) <-- for assorted ramblings -->
 
-or --> [here](list_of_games.html) <-- for a list of my life's accomplishments
+// <!-- or -- > [here](list_of_games.html) <-- for a list of my life's accomplishments -->
 
 &nbsp;
 &nbsp;

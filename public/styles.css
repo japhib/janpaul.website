@@ -1,5 +1,5 @@
 body {
-    font-family: 'Ubuntu Mono', monospace;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 20px;
 
     background-color: #234;
@@ -46,6 +46,34 @@ p {
     margin: 1.5em;
 }
 
+.subtitle {
+    font-style: italic;
+}
+
+.date {
+    margin-left: 35px;
+    border: 2px solid #789;
+    border-right: 0px;
+    padding: 12px;
+    font-size: .8em;
+    width: 180px;
+}
+
+blockquote {
+    border-left: 10px solid #567;
+}
+
+strong {
+    /* extra bold */
+    font-weight: 900;
+    /* font-size: 22px; */
+    text-shadow: -1px 0px #b0b0b0;
+
+    /* chroma aberration */
+    /* color: white; */
+    /* text-shadow: -2px 0px #f08080, 2px 0px #80f080; */
+}
+
 .text {
     margin: 1.5em;
 }
@@ -78,6 +106,10 @@ img {
     /* center it */
     display: block;
     margin: 0px auto;
+}
+
+hr {
+    margin: 0px 80px;
 }
 
 button:hover {
@@ -120,4 +152,8 @@ a.rungame:hover button.run_game_btn {
     background-color: #48b;
     color: #f0f0f0;
     text-decoration: none;
+}
+
+#disqus_thread {
+    margin: 0px 10%;
 }

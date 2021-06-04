@@ -3,11 +3,12 @@
         <meta charset="utf-8"/>
 <title>WWW.JanPaul.COM.NET.BIZ/janpaulthoughts</title>
 <link rel="preconnect" href="https://fonts.gstatic.com"> 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css" />
 
 <script>
-    function externalLinksTargetBlank() {
+    function onPageLoad() {
         // links to external sites should open in a new tab/window
         var links = document.links;
         for (var i = 0; i < links.length; i++) {
@@ -16,25 +17,31 @@
                 link.target = "_blank";
             }
         }
+
+        // set color of <hr>
+        for (let element of document.getElementsByTagName('hr')) {
+            element.color = '#765';
+        }
     }
 </script>
     </head>
-    <body onload="externalLinksTargetBlank()">
+    <body onload="onPageLoad()">
         <br />
 <div class="centered header">
     <a href="/">
         WWW.JanPaul.COM.NET.BIZ/janpaulthoughts
     </a>
     <div class="centered" style="margin-top: 20px;">
-        <span class="headerlinks"><a href="/about.html">about</a></span>
-        <span class="headerlinks"><a href="/list_of_games.html">games</a></span>
-        <span class="headerlinks"><a href="/blog">blog</a></span>
+        <!-- <span class="headerlinks"><a href="/about.html">about</a></span> -->
+        <!-- <span class="headerlinks"><a href="/list_of_games.html">games</a></span> -->
+        <span class="headerlinks"><a href="/blog/ultimate-game-engine.html">blog</a></span>
     </div>
 </div>
 
         
         
-         <div class="centered">
+        
+        <div class="content"> <div class="centered">
 <p></p>
 
 <h1>Blog coming soon!</h1>
@@ -55,6 +62,7 @@
 
 <p></p>
 
- </div>
+ </div></div>
+        
     </body>
 </html>

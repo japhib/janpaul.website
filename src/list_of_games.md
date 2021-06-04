@@ -4,6 +4,10 @@ description: I make games as a hobby during my free time. This is a list of the 
 --
 # The big ones
 
+## Barnard's Star
+
+this section WIP
+
 ## Card Crusade
 
 My first commercial game! I worked on this with my brother Lincoln for about a year and we released it in early 2019. We did this under the banner of [Pollywog Games](https://pollywog.games).
