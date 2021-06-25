@@ -14,10 +14,6 @@ by 🌜 night 🦇
 
 &nbsp;
 
-// <div class="centered" style="margin-top: 1em; font-size: .6em">I hear the cool kids like emojis</div>
-
-&nbsp;
-
 ### Welcome to the digital projection of my corporeal being
 
 // <div class="centered">I hope it's nice</div>
