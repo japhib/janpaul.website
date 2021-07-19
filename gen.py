@@ -3,6 +3,8 @@ import chevron
 import markdown2
 import re
 
+from datetime import datetime
+
 rungamebutton = """
 <button class="button run_game_btn">
     <svg stroke-linecap="round" stroke="currentColor" class="svgicon icon_play" role="img" version="1.1"
@@ -41,20 +43,23 @@ template = readfile("layout/template.html")
 head = readfile("layout/head.html")
 header = readfile("layout/header.html")
 
-context = {
-    'header': header
-}
+blogposts = []
 
 allfiles = glob.glob("src/**", recursive=True)
 for filename in allfiles:
     if not filename.endswith('.md'):
         continue
 
-    file_lines = readfile(filename).split('\n')
+    # remove "src/" from beginning of filename
+    trimmed_filename = filename[4:]
+    # change extension ".md" to ".html"
+    trimmed_filename = re.sub(r'\.md$', '.html', trimmed_filename)
 
+    file_lines = readfile(filename).split('\n')
 
     # convert markdown to html
     converted_lines = []
+    raw_lines = []
     in_frontmatter = False
     frontmatter = {}
     for line in file_lines:
@@ -80,9 +85,16 @@ for filename in allfiles:
         # everything else is markdown translated to html
         else:
             converted_lines.append(markdown2.markdown(line))
+            # use regex to remove links with [this syntax](http://link)
+            raw_lines.append(re.sub(r'\[(.*?)\]\(.*?\)', r'\1', line))
 
     file_contents = "\n".join(converted_lines)
-    context["content"] = '<div class="content">' + file_contents + '</div>'
+    raw_file_contents = "\n".join(raw_lines)
+
+    context = {
+        'header': header,
+        'content': '<div class="content">' + file_contents + '</div>'
+    }
 
     # parse title from frontmatter
     if 'title' in frontmatter:
@@ -105,8 +117,20 @@ for filename in allfiles:
     else:
         context["description"] = ''
     
-    # disqus
-    if filename.startswith('src/blog/') and filename != 'src/blog/index.md':
+    # blog-specific stuff
+    if filename.startswith('src/blog/'):
+        # parse date (for sorting) and add to list of blog posts
+        blogpost = {
+            'title': frontmatter['title'],
+            'description': frontmatter['description'],
+            'date': datetime.strptime(frontmatter['date'], '%B %d %Y'),
+            'date_str': frontmatter['date'],
+            'firstline': raw_file_contents[:350] + '...',
+            'link': trimmed_filename,
+        }
+        blogposts.append(blogpost)
+
+        # disqus
         page_identifier = filename.replace('src/blog/', '')
         page_identifier = page_identifier.replace('.md', '')
         context['disqus'] = chevron.render(disqus_code, {'page_identifier': page_identifier})
@@ -119,13 +143,39 @@ for filename in allfiles:
     # now actually render
     rendered = chevron.render(template, context)
 
-    # remove "src/" from beginning of filename
-    trimmed_filename = filename[4:]
-    # change extension ".md" to ".html"
-    trimmed_filename = re.sub(r'\.md$', '.html', trimmed_filename)
-
     # now write it out
     with open("public/" + trimmed_filename, 'w') as file:
         file.write(rendered)
-    
-    
+
+
+# generate blog post index page w/ list of blog posts
+blogposts.sort(key=lambda x: x['date'], reverse=True)
+blogpost_lines = []
+for blogpost in blogposts:
+    blogpost_line = """
+    <a href="/{}"><h2>{}</h2></a>
+    <p class="date blog_list">{}</p>
+    <p class="subtitle">{}</p>
+    <div class="content"><p>{}</p></div>
+    """.format(
+        blogpost['link'],
+        blogpost['title'],
+        blogpost['date_str'],
+        blogpost['description'],
+        blogpost['firstline']
+    )
+    blogpost_lines.append(blogpost_line)
+blogpost_str_content = "\n".join(blogpost_lines)
+context = {
+    'header': header,
+    'content': '<div class="content">' + blogpost_str_content + '</div>',
+    'title': '<h1>All Posts</h1>',
+    'head_title': ' - Blogz',
+    'date': '',
+    'description': '',
+    'disqus': '',
+}
+context['head'] = chevron.render(head, context)
+rendered = chevron.render(template, context)
+with open("public/blog/index.html", 'w') as file:
+    file.write(rendered)

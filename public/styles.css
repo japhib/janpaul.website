@@ -59,6 +59,10 @@ p {
     width: 180px;
 }
 
+.date.blog_list {
+    width: 120px;
+}
+
 blockquote {
     border-left: 10px solid #567;
 }
