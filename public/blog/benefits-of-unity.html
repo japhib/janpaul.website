@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-<title>WWW.JanPaul.COM.NET.BIZ/janpaulthoughts - Why I'm sticking to Unity</title>
+<title>WWW.JanPaul.COM.NET.BIZ/janpaulthoughts - The Benefits of Unity</title>
 <link rel="preconnect" href="https://fonts.gstatic.com"> 
 <link rel="preconnect" href="https://fonts.gstatic.com"> 
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
@@ -38,18 +38,14 @@
     </div>
 </div>
 
-        <h1>Why I'm sticking to Unity</h1>
-        <p class="subtitle">spoiler alert: the pros outweigh the cons</p>
-        <p class="date">Published June 25 2021</p>
-        <div class="content"><p>In my <a href="ultimate-game-engine.html">last post</a>, I detailed all the many reasons why I dislike Unity and find it frustrating to work with. Despite all those reasons, I've released <a href="https://pollywog.games/card-crusade.html">a commercial game</a> built with Unity and am close to releasing <a href="https://store.steampowered.com/app/1217500/Barnards_Star/">a second</a>. That amounts to <strong>several years</strong> of working with Unity -- if I hate it so much, why haven't I bailed before now? Why don't I start using one of the other available engines or frameworks?</p>
+        <h1>The Benefits of Unity</h1>
+        <p class="subtitle">the reasons it's so flippin' popular</p>
+        <p class="date">Published July 19 2021</p>
+        <div class="content"><p>In my <a href="ultimate-game-engine.html">last post</a>, I detailed all the many reasons why I dislike Unity and find it frustrating to work with. Despite all those reasons, I've released <a href="https://pollywog.games/card-crusade.html">a commercial game</a> built with Unity and am close to releasing <a href="https://store.steampowered.com/app/1217500/Barnards_Star/">a second</a>. That amounts to <strong>several years</strong> of working with Unity -- if I hate it so much, why haven't I bailed before now?</p>
 
 <p></p>
 
-<p>(... if you could read my mind, you might also say, "and why are you still planning on doing future projects in Unity?)</p>
-
-<p></p>
-
-<p>Well, the reason is that the benefits of using Unity outweigh the costs for me. I've already gone into excruciating detail on my gripes about the engine, so I feel that to be fair I need to talk about the benefits of it.</p>
+<p>Well, the reason is that the benefits of using Unity outweigh the costs for me. I may or may not keep using it for future projects, but these are the reasons why it's been good enough for past and current projects. I've already gone into <em>excruciating</em> detail on my gripes about the engine, so to be fair I need to talk about the benefits of it.</p>
 
 <p></p>
 
@@ -65,7 +61,7 @@
 
 <p></p>
 
-<p>What's more, there are certain tasks that the editor actually does make quite a bit easier. For instance, <strong>putting together a GUI.</strong> Doing this with code only involves a lot of making small changes to numbers and then restarting the application to see what it looks like now. This is a tedious process. Also, due to my dislike of dynamic languages (which I also went over in the last post), it often involves a compilation step which can slow the process down even further. Having a visual editor for this type of thing allows you to adjust stuff based on what it looks like, and have <em>immediate</em> feedback, which you can then use to make further adjustments.</p>
+<p>What's more, there are certain tasks that the editor actually does make quite a bit easier. For instance, <strong>putting together a GUI.</strong> Doing this with code only involves a lot of making small changes to numbers and then restarting the application to see what it looks like now. This is a tedious process. And if your code has to re-compile each time it's changed, that slows the process down even further. Having a visual editor for this type of thing allows you to adjust stuff based on what it looks like, and have <em>immediate</em> feedback, which you can then use to make further adjustments.</p>
 
 <p></p>
 
@@ -92,6 +88,9 @@
 
 <p></p>
 
+ <div class="sidenote">
+<p></p>
+
 <p>For instance, for graphics you might think, "OpenGL is supported everywhere, why not just use that?" and you'd be partially right, because it's not quite OpenGL everywhere. It's OpenGL on desktop platforms, WebGL on the web, and OpenGL ES on mobile platforms, each a slightly different flavor of the API. And if I wanted to export to Xbox, PS4/5, or Switch, it'd be a totally different, proprietary API. It's the same story for sound and input -- no matter how cross-platform you may think the library is that you're using, there's going to be significant differences getting it to run exactly how you want when you move to a new platform.</p>
 
 <p></p>
@@ -100,15 +99,18 @@
 
 <p></p>
 
-<p>I'm not even going to go into the difficulties of trying to build and debug a C++ app on iOS and Android. I would much rather deal with Unity's quirks than try to demystify the arcane secrets of the Android NDK.</p>
+ </div>
+<p></p>
+
+<p>I'm not even going to go into the difficulties of trying to build and debug a C++ app on iOS and Android. I haven't done it yet, but I'm pretty intimidated by it. I would much rather deal with Unity's quirks than try to demystify the arcane secrets of the Android NDK.</p>
 
 <p></p>
 
-<p>I'm not saying it's not <em>possible</em> to work out all those things. But for me, game development is a hobby, and therefore, <strong>I put a premium on enjoyment.</strong> And I don't enjoy working through that crap. So instead, I just stick to Unity.</p>
+<p>I'm not saying it's not <em>possible</em> to work out all those things. But so far, my goal has been to finish these games, and Unity allows me to do that without having to make my own engine.</p>
 
 <p></p>
 
-<p>All you have to do (minus some obnoxious configuration you have to do to get your signing certificates set up for mobile) is click "Build" and it builds for the target of your choice. They also offer Unity Cloud Build for $9/month which is nice for pumping out the builds without having to take up time doing it on your computer. It still has some problems, like if you're having an iOS-specific issue, the debug cycle is a pain because you have to make a new build every time you make a change. But overall, Unity works <em>well enough</em> on all the platforms that I care about that it's worth it to me.</p>
+<p>All you have to do (more or less) is click "Build" and it builds for the target of your choice. They also offer Unity Cloud Build for $9/month which is nice for pumping out the builds without having to take up time doing it on your computer. It still has some problems, like if you're having an iOS-specific issue, the debug cycle is a pain because you have to make a new build every time you make a change. But overall, Unity works <em>well enough</em> on all the platforms that I care about that it's worth it to me.</p>
 
 <p></p>
 
@@ -168,18 +170,18 @@
 
 <p></p>
 
-<p>It's fine, I know how to use it, and I know how to find help when I'm stuck. That's pretty much all this boils down to. If I wanted to make my own game engine, sure I could spend a couple years making it perfect and getting it to the point that I'm already at with Unity. But there's not really a reason to when I can just use Unity.</p>
+<p>It's fine, I know how to use it, and I know how to find help when I'm stuck. That's pretty much all this boils down to.</p>
 
 <p></p>
 
-<p>Again, this may not apply if you're just starting out in gamedev or if you have goals different from my own. But this is why I personally am sticking to Unity.</p>
+<p>I do still want to fiddle with other engines -- I just got accepted into the Luxe closed beta! -- and hope to make more progress on my own custom game engine at some point. But these are the reasons I've stuck with Unity so far.</p>
 </div>
         
 <div id="disqus_thread"></div>
 <script>
     var disqus_config = function () {
         this.page.url = location.href;
-        this.page.identifier = 'why-im-sticking-to-unity';
+        this.page.identifier = 'benefits-of-unity';
     };
     (function() { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
