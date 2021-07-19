@@ -43,6 +43,14 @@ template = readfile("layout/template.html")
 head = readfile("layout/head.html")
 header = readfile("layout/header.html")
 
+def render(content, context, filename):
+    context['content'] = '<div class="content">' + content + '</div>'
+    context['head'] = chevron.render(head, context)
+    context['header'] = header
+    rendered = chevron.render(template, context)
+    with open("public/" + filename, 'w') as file:
+        file.write(rendered)
+
 blogposts = []
 
 allfiles = glob.glob("src/**", recursive=True)
@@ -91,31 +99,21 @@ for filename in allfiles:
     file_contents = "\n".join(converted_lines)
     raw_file_contents = "\n".join(raw_lines)
 
-    context = {
-        'header': header,
-        'content': '<div class="content">' + file_contents + '</div>'
-    }
+    context = {}
 
     # parse title from frontmatter
     if 'title' in frontmatter:
         # context["title"] = '<div class="page-title">' + frontmatter['title'] + '</div>'
         context["title"] = '<h1>' + frontmatter['title'] + '</h1>'
         context["head_title"] = ' - ' + frontmatter['title']
-    else:
-        context["title"] = ''
-        context["head_title"] = ''
 
     # parse date from frontmatter
     if 'date' in frontmatter:
         context["date"] = '<p class="date">Published ' + frontmatter['date'] + '</p>'
-    else:
-        context["date"] = ''
 
     # parse description from frontmatter
     if 'description' in frontmatter:
         context["description"] = '<p class="subtitle">' + frontmatter['description'] + '</p>'
-    else:
-        context["description"] = ''
     
     # blog-specific stuff
     if filename.startswith('src/blog/'):
@@ -134,18 +132,8 @@ for filename in allfiles:
         page_identifier = filename.replace('src/blog/', '')
         page_identifier = page_identifier.replace('.md', '')
         context['disqus'] = chevron.render(disqus_code, {'page_identifier': page_identifier})
-    else:
-        context['disqus'] = ''
 
-    # render context into the head of the template (template within a template)
-    context['head'] = chevron.render(head, context)
-    
-    # now actually render
-    rendered = chevron.render(template, context)
-
-    # now write it out
-    with open("public/" + trimmed_filename, 'w') as file:
-        file.write(rendered)
+    render(file_contents, context, trimmed_filename)
 
 
 # generate blog post index page w/ list of blog posts
@@ -167,15 +155,7 @@ for blogpost in blogposts:
     blogpost_lines.append(blogpost_line)
 blogpost_str_content = "\n".join(blogpost_lines)
 context = {
-    'header': header,
-    'content': '<div class="content">' + blogpost_str_content + '</div>',
-    'title': '<h1>All Posts</h1>',
+    'title': '<h1>All Postz</h1>',
     'head_title': ' - Blogz',
-    'date': '',
-    'description': '',
-    'disqus': '',
 }
-context['head'] = chevron.render(head, context)
-rendered = chevron.render(template, context)
-with open("public/blog/index.html", 'w') as file:
-    file.write(rendered)
+render(blogpost_str_content, context, "blog/index.html")
