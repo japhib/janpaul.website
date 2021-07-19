@@ -1,11 +1,13 @@
 --
-title: The Benefits of Unity
-description: the reasons it's so flippin' popular
+title: Unity: the Good Parts
+description: there has to be a reason for why it's so flippin' popular
 date: July 19 2021
 --
+// <img src="/img/javascript_good_parts.png" style="width: 50%" />
+
 In my [last post](ultimate-game-engine.html), I detailed all the many reasons why I dislike Unity and find it frustrating to work with. Despite all those reasons, I've released [a commercial game](https://pollywog.games/card-crusade.html) built with Unity and am close to releasing [a second](https://store.steampowered.com/app/1217500/Barnards_Star/). That amounts to **several years** of working with Unity -- if I hate it so much, why haven't I bailed before now?
 
-Well, the reason is that the benefits of using Unity outweigh the costs for me. I may or may not keep using it for future projects, but these are the reasons why it's been good enough for past and current projects. I've already gone into _excruciating_ detail on my gripes about the engine, so to be fair I need to talk about the benefits of it.
+Well, the reason is that the good parts of Unity outweigh the costs for me. I may or may not keep using it for future projects, but these are the reasons why it's been good enough for past and current projects. I've already gone into _excruciating_ detail on my gripes about the engine, so to be fair I need to talk about the benefits of it.
 
 **_Note:_** _Like the last post, a lot of these benefits are specific to me and don't necessarily apply to other people, with a different background or different goals._
 
