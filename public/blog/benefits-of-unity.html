@@ -53,92 +53,69 @@
         <p class="subtitle">there has to be a reason for why it's so flippin' popular</p>
         <p class="date">Published July 19 2021</p>
         <div class="content"> <img src="/img/javascript_good_parts.png" style="width: 50%" />
-<p></p>
 
-<p>In my <a href="ultimate-game-engine.html">last post</a>, I detailed all the many reasons why I dislike Unity and find it frustrating to work with. Despite all those reasons, I've released <a href="https://pollywog.games/card-crusade.html">a commercial game</a> built with Unity and am close to releasing <a href="https://store.steampowered.com/app/1217500/Barnards_Star/">a second</a>. That amounts to <strong>several years</strong> of working with Unity -- if I hate it so much, why haven't I bailed before now?</p>
+<p>In my <a href="ultimate-game-engine.html">last post</a>, I detailed all the many reasons why I dislike Unity and find it frustrating to work with. Despite all those reasons, I&rsquo;ve released <a href="https://pollywog.games/card-crusade.html">a commercial game</a> built with Unity and am close to releasing <a href="https://store.steampowered.com/app/1217500/Barnards_Star/">a second</a>. That amounts to <strong>several years</strong> of working with Unity &ndash; if I hate it so much, why haven&rsquo;t I bailed before now?</p>
 
-<p></p>
 
-<p>Well, the reason is that the good parts of Unity outweigh the costs for me. I may or may not keep using it for future projects, but these are the reasons why it's been good enough for past and current projects. I've already gone into <em>excruciating</em> detail on my gripes about the engine, so to be fair I need to talk about the benefits of it.</p>
+<p>Well, the reason is that the good parts of Unity outweigh the costs for me. I may or may not keep using it for future projects, but these are the reasons why it&rsquo;s been good enough for past and current projects. I&rsquo;ve already gone into <em>excruciating</em> detail on my gripes about the engine, so to be fair I need to talk about the benefits of it.</p>
 
-<p></p>
 
-<p><strong><em>Note:</em></strong> <em>Like the last post, a lot of these benefits are specific to me and don't necessarily apply to other people, with a different background or different goals.</em></p>
+<p><strong><em>Note:</em></strong> <em>Like the last post, a lot of these benefits are specific to me and don&rsquo;t necessarily apply to other people, with a different background or different goals.</em></p>
 
-<p></p>
 
-<h3>The editor isn't that bad, and can actually be pretty nice for certain things</h3>
+<h3>The editor isn&rsquo;t that bad, and can actually be pretty nice for certain things</h3>
 
-<p></p>
 
-<p>For better or worse, the Unity editor is a huge part of the development process. This was especially annoying at first, but after using Unity for a while, I've become quite comfortable in how to use it. So I don't think it's that bad anymore.</p>
+<p>For better or worse, the Unity editor is a huge part of the development process. This was especially annoying at first, but after using Unity for a while, I&rsquo;ve become quite comfortable in how to use it. So I don&rsquo;t think it&rsquo;s that bad anymore.</p>
 
-<p></p>
 
-<p>What's more, there are certain tasks that the editor actually does make quite a bit easier. For instance, <strong>putting together a GUI.</strong> Doing this with code only involves a lot of making small changes to numbers and then restarting the application to see what it looks like now. This is a tedious process. And if your code has to re-compile each time it's changed, that slows the process down even further. Having a visual editor for this type of thing allows you to adjust stuff based on what it looks like, and have <em>immediate</em> feedback, which you can then use to make further adjustments.</p>
+<p>What&rsquo;s more, there are certain tasks that the editor actually does make quite a bit easier. For instance, <strong>putting together a GUI.</strong> Doing this with code only involves a lot of making small changes to numbers and then restarting the application to see what it looks like now. This is a tedious process. And if your code has to re-compile each time it&rsquo;s changed, that slows the process down even further. Having a visual editor for this type of thing allows you to adjust stuff based on what it looks like, and have <em>immediate</em> feedback, which you can then use to make further adjustments.</p>
 
-<p></p>
 
-<p>This applies to all visual things in general. If you're working on a <a href="https://en.wikipedia.org/wiki/Particle_system">particle effect</a>, you're making a lot of small changes and seeing how that affects its look. Or lighting in a scene, or colors for a sprite, etc. And since a game is largely made up of its visuals, being able to adust and iterate on these things can make a big difference.</p>
+<p>This applies to all visual things in general. If you&rsquo;re working on a <a href="https://en.wikipedia.org/wiki/Particle_system">particle effect</a>, you&rsquo;re making a lot of small changes and seeing how that affects its look. Or lighting in a scene, or colors for a sprite, etc. And since a game is largely made up of its visuals, being able to adust and iterate on these things can make a big difference.</p>
 
-<p></p>
 
 <h3>Unity supports all the platforms I care about</h3>
 
-<p></p>
 
-<p>I'm pretty sure the name "Unity" comes from the idea that you can write your code once and export it to any platform. While I don't think that's <em>entirely</em> true -- there are significant differences between the platforms that you do need to take into account -- it does make the process easier.</p>
+<p>I&rsquo;m pretty sure the name &ldquo;Unity&rdquo; comes from the idea that you can write your code once and export it to any platform. While I don&rsquo;t think that&rsquo;s <em>entirely</em> true &ndash; there are significant differences between the platforms that you do need to take into account &ndash; it does make the process easier.</p>
 
-<p></p>
 
 <p>I got a taste of the difficulty of exporting to different platforms when I was fiddling with my own C++ game engine a while ago. I only wanted to support Windows, Mac, and web (via <a href="https://emscripten.org">Emscripten</a>), which is a far cry from the number of platforms supported by Unity:</p>
 
-<p></p>
 
  <img src="/img/unity_supported_platforms.png" style="width: 50%" />
-<p></p>
 
-<p>See, the challenge isn't just in getting the code to <em>compile</em> for the platform you're targeting, although that is definitely an issue. One big issue is that there are a lot of different APIs you have to use depending on the device you're targeting.</p>
+<p>See, the challenge isn&rsquo;t just in getting the code to <em>compile</em> for the platform you&rsquo;re targeting, although that is definitely an issue. One big issue is that there are a lot of different APIs you have to use depending on the device you&rsquo;re targeting.</p>
 
-<p></p>
 
  <div class="sidenote">
-<p></p>
 
-<p>For instance, for graphics you might think, "OpenGL is supported everywhere, why not just use that?" and you'd be partially right, because it's not quite OpenGL everywhere. It's OpenGL on desktop platforms, WebGL on the web, and OpenGL ES on mobile platforms, each a slightly different flavor of the API. And if I wanted to export to Xbox, PS4/5, or Switch, it'd be a totally different, proprietary API. It's the same story for sound and input -- no matter how cross-platform you may think the library is that you're using, there's going to be significant differences getting it to run exactly how you want when you move to a new platform.</p>
+<p>For instance, for graphics you might think, &ldquo;OpenGL is supported everywhere, why not just use that?&rdquo; and you&rsquo;d be partially right, because it&rsquo;s not quite OpenGL everywhere. It&rsquo;s OpenGL on desktop platforms, WebGL on the web, and OpenGL ES on mobile platforms, each a slightly different flavor of the API. And if I wanted to export to Xbox, PS4/5, or Switch, it&rsquo;d be a totally different, proprietary API. It&rsquo;s the same story for sound and input &ndash; no matter how cross-platform you may think the library is that you&rsquo;re using, there&rsquo;s going to be significant differences getting it to run exactly how you want when you move to a new platform.</p>
 
-<p></p>
 
-<p>Another issue is that file system access is not entirely the same. This is mainly an issue between desktop and web, since a program running in your browser doesn't have any filesystem to access to actually load your files from. But even then, there are lots of annoying things to worry about in C++. Do I use forward slashes or backslashes for file paths? How do I know where to go to find the asset files for the game? Why does everything in the Windows API use <code>WCHAR</code> instead of a regular <code>char</code>? In Unity this is auto-magically solved because all your files are bundled and loaded for you by the engine.</p>
+<p>Another issue is that file system access is not entirely the same. This is mainly an issue between desktop and web, since a program running in your browser doesn&rsquo;t have any filesystem to access to actually load your files from. But even then, there are lots of annoying things to worry about in C++. Do I use forward slashes or backslashes for file paths? How do I know where to go to find the asset files for the game? Why does everything in the Windows API use <code>WCHAR</code> instead of a regular <code>char</code>? In Unity this is auto-magically solved because all your files are bundled and loaded for you by the engine.</p>
 
-<p></p>
 
  </div>
-<p></p>
 
-<p>I'm not even going to go into the difficulties of trying to build and debug a C++ app on iOS and Android. I haven't done it yet, but I'm pretty intimidated by it. I would much rather deal with Unity's quirks than try to demystify the arcane secrets of the Android NDK.</p>
+<p>I&rsquo;m not even going to go into the difficulties of trying to build and debug a C++ app on iOS and Android. I haven&rsquo;t done it yet, but I&rsquo;m pretty intimidated by it. I would much rather deal with Unity&rsquo;s quirks than try to demystify the arcane secrets of the Android NDK.</p>
 
-<p></p>
 
-<p>I'm not saying it's not <em>possible</em> to work out all those things. But so far, my goal has been to finish these games, and Unity allows me to do that without having to make my own engine.</p>
+<p>I&rsquo;m not saying it&rsquo;s not <em>possible</em> to work out all those things. But so far, my goal has been to finish these games, and Unity allows me to do that without having to make my own engine.</p>
 
-<p></p>
 
-<p>All you have to do (more or less) is click "Build" and it builds for the target of your choice. They also offer Unity Cloud Build for $9/month which is nice for pumping out the builds without having to take up time doing it on your computer. It still has some problems, like if you're having an iOS-specific issue, the debug cycle is a pain because you have to make a new build every time you make a change. But overall, Unity works <em>well enough</em> on all the platforms that I care about that it's worth it to me.</p>
+<p>All you have to do (more or less) is click &ldquo;Build&rdquo; and it builds for the target of your choice. They also offer Unity Cloud Build for $9/month which is nice for pumping out the builds without having to take up time doing it on your computer. It still has some problems, like if you&rsquo;re having an iOS-specific issue, the debug cycle is a pain because you have to make a new build every time you make a change. But overall, Unity works <em>well enough</em> on all the platforms that I care about that it&rsquo;s worth it to me.</p>
 
-<p></p>
 
 <h3>I like C#</h3>
 
-<p></p>
 
 <p>C# is nice. I enjoy coding in it.</p>
 
-<p></p>
 
 <p>It has a progressive feature set, including stuff like:</p>
 
-<p></p>
 
 <ul>
 <li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/var">the <code>var</code> keyword</a>,</li>
@@ -156,55 +133,32 @@
 <li>and even <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/">async/await</a> if you want to get fancy.</li>
 </ul>
 
-<p></p>
 
-<p>It also has <a href="http://clarkkromenaker.com/post/csharp-structs/">stack-allocated structs</a> so you can avoid a fair amount of garbage-collection. That's critical for real-time games, and it's a feature that Java, Lua, Haxe, Javascript, and most other languages don't have.</p>
+<p>It also has <a href="http://clarkkromenaker.com/post/csharp-structs/">stack-allocated structs</a> so you can avoid a fair amount of garbage-collection. That&rsquo;s critical for real-time games, and it&rsquo;s a feature that Java, Lua, Haxe, Javascript, and most other languages don&rsquo;t have.</p>
 
-<p></p>
 
 <h3>It has a HUGE community</h3>
 
-<p></p>
 
-<p>I can't find it now, but I saw a tweet a while back that said something like:</p>
+<p>I can&rsquo;t find it now, but I saw a tweet a while back that said something like:</p>
 
-<p></p>
 
 <blockquote>
-  <p>Unity sucks, but the community is big enough that no matter what problem you're having, you can google it and you'll find 6 different ways to solve it.</p>
+<p>Unity sucks, but the community is big enough that no matter what problem you&rsquo;re having, you can google it and you&rsquo;ll find 6 different ways to solve it.</p>
 </blockquote>
 
-<p></p>
 
-<p>I'm <em>pretty</em> sure Unity is the most popular game engine out there. It definitely seems so when you're googling stuff. It may not be the best, or the fastest, and it has its fair share of bugs and crashes and broken or unfinished features. But it doesn't matter because no matter what you want to do, there's a huge amount of content online telling you how to do it. That's something that can't necessarily be said about the other engines &amp; frameworks I've used.</p>
+<p>I&rsquo;m <em>pretty</em> sure Unity is the most popular game engine out there. It definitely seems so when you&rsquo;re googling stuff. It may not be the best, or the fastest, and it has its fair share of bugs and crashes and broken or unfinished features. But it doesn&rsquo;t matter because no matter what you want to do, there&rsquo;s a huge amount of content online telling you how to do it. That&rsquo;s something that can&rsquo;t necessarily be said about the other engines &amp; frameworks I&rsquo;ve used.</p>
 
-<p></p>
 
 <h2>TL;DR</h2>
 
-<p></p>
 
-<p>It's fine, I know how to use it, and I know how to find help when I'm stuck. That's pretty much all this boils down to.</p>
+<p>It&rsquo;s fine, I know how to use it, and I know how to find help when I&rsquo;m stuck. That&rsquo;s pretty much all this boils down to.</p>
 
-<p></p>
 
-<p>I do still want to fiddle with other engines -- I just got accepted into the Luxe closed beta! -- and hope to make more progress on my own custom game engine at some point. But these are the reasons I've stuck with Unity so far.</p>
+<p>I do still want to fiddle with other engines &ndash; I just got accepted into the <a href="https://luxeengine.com/">Luxe</a> closed beta! &ndash; and hope to make more progress on my own custom game engine at some point. But these are the reasons I&rsquo;ve stuck with Unity so far.</p>
 </div>
         
-<div id="disqus_thread"></div>
-<script>
-    var disqus_config = function () {
-        this.page.url = location.href;
-        this.page.identifier = 'benefits-of-unity';
-    };
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://janpaulwebsite.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
     </body>
 </html>

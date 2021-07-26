@@ -52,142 +52,110 @@
         <h1>The quest for the Ultimate Game Engine</h1>
         <p class="subtitle">(or: why they all *suck*)</p>
         <p class="date">Published June 3 2021</p>
-        <div class="content"><p>I've been using Unity for about 4 years now. I've even used it to develop <a href="https://pollywog.games">a couple of commercial projects</a>. So obviously, it can get the job done. It has a <a href="https://www.reddit.com/r/Unity3D/">huge</a> <a href="https://forum.unity.com">community</a> and there are tons of <a href="https://catlikecoding.com/unity/tutorials/">high-quality</a> <a href="https://www.youtube.com/user/Brackeys">tutorials</a> online. It appears to be the <a href="https://itch.io/game-development/engines/most-projects">most-used game engine</a> among indies and hobbyists. And best of all, it's free.</p>
+        <div class="content"><p>I&rsquo;ve been using Unity for about 4 years now. I&rsquo;ve even used it to develop <a href="https://pollywog.games">a couple of commercial projects</a>. So obviously, it can get the job done. It has a <a href="https://www.reddit.com/r/Unity3D/">huge</a> <a href="https://forum.unity.com">community</a> and there are tons of <a href="https://catlikecoding.com/unity/tutorials/">high-quality</a> <a href="https://www.youtube.com/user/Brackeys">tutorials</a> online. It appears to be the <a href="https://itch.io/game-development/engines/most-projects">most-used game engine</a> among indies and hobbyists. And best of all, it&rsquo;s free.</p>
 
-<p></p>
 
-<p>... so what's my gripe with it?</p>
+<p>&hellip; so what&rsquo;s my gripe with it?</p>
 
-<p></p>
 
-<p>A lot of things, really. Here the major ones, in no particular order. </p>
+<p>A lot of things, really. Here the major ones, in no particular order.</p>
 
-<p></p>
 
-<p><strong><em>Disclaimer:</em></strong> <em>All my complaints are specific to me, with my particular (coding-heavy) background. I know these points really aren't applicable to every game developer. I'm just speaking for myself here.</em></p>
+<p><strong><em>Disclaimer:</em></strong> <em>All my complaints are specific to me, with my particular (coding-heavy) background. I know these points really aren&rsquo;t applicable to every game developer. I&rsquo;m just speaking for myself here.</em></p>
 
-<p></p>
 
-<h3>It's editor-centric</h3>
+<h3>It&rsquo;s editor-centric</h3>
 
-<p></p>
 
-<p>Unity has a lot of features intended so that people <em>other</em> than coders can participate in the game development process. That's great and all, but I'm a coder. When I want a reference to an object on another object's script, I don't want to have to switch from the IDE to the Unity editor, wait a solid 5 seconds for my latest changes to compile, find and select the object I'm working on, hunt around for the object I want to connect to it, and then use my <em>mouse</em> to <em>physically</em> drag &amp; drop the dependency over. Can you imagine anything more primitive?</p>
+<p>Unity has a lot of features intended so that people <em>other</em> than coders can participate in the game development process. That&rsquo;s great and all, but I&rsquo;m a coder. When I want a reference to an object on another object&rsquo;s script, I don&rsquo;t want to have to switch from the IDE to the Unity editor, wait a solid 5 seconds for my latest changes to compile, find and select the object I&rsquo;m working on, hunt around for the object I want to connect to it, and then use my <em>mouse</em> to <em>physically</em> drag &amp; drop the dependency over. Can you imagine anything more primitive?</p>
 
-<p></p>
 
-<p>And that's just one example. There are a million little things that would be awesome if you could do either in code or in editing a text file for settings, but you just can't. You <em>have</em> to use the editor. There's no way around it.</p>
+<p>And that&rsquo;s just one example. There are a million little things that would be awesome if you could do either in code or in editing a text file for settings, but you just can&rsquo;t. You <em>have</em> to use the editor. There&rsquo;s no way around it.</p>
 
-<p></p>
 
-<h3>It's 3d-centric</h3>
+<h3>It&rsquo;s 3d-centric</h3>
 
-<p></p>
 
 <p>You can have a 2d game in Unity, but you never really feel like Unity is <em>meant</em> to be used for it.</p>
 
-<p></p>
 
-<p>For example: to create a sprite in a scene, you drag an image into the scene view. It appears wherever you dropped it in the scene view. However, when you look in game view, it doesn't show up! What's wrong? The answer is usually that when you drag &amp; dropped it into the scene, Unity put the X and Y coordinates of that object where you expected, but the Z coordinate is at something ridiculous like -2548.19. And because the game camera is at a Z position of -10, it can't see that object. The fix is, of course, just to change the Z coordinate back to 0, where it belongs in a 2d game. This seems like it'd be a simple fix for Unity to make, but of course they won't do it because it's only for 2d.</p>
+<p>For example: to create a sprite in a scene, you drag an image into the scene view. It appears wherever you dropped it in the scene view. However, when you look in game view, it doesn&rsquo;t show up! What&rsquo;s wrong? The answer is usually that when you drag &amp; dropped it into the scene, Unity put the X and Y coordinates of that object where you expected, but the Z coordinate is at something ridiculous like -2548.19. And because the game camera is at a Z position of -10, it can&rsquo;t see that object. The fix is, of course, just to change the Z coordinate back to 0, where it belongs in a 2d game. This seems like it&rsquo;d be a simple fix for Unity to make, but of course they won&rsquo;t do it because it&rsquo;s only for 2d.</p>
 
-<p></p>
 
-<p>Another example is the striking lack of support for a good 2d lighting system. Unity only <em>very</em> recently <a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@12.0/manual/Lights-2D-intro.html">added support</a> for this, but it has terrible performance unless you're on a high-end graphics card, and it's only available on the Universal Render Pipeline, which comes with its own set of issues. This is in spite of <a href="https://www.hollowknight.com">every</a> <a href="http://www.celestegame.com">major</a> <a href="https://store.steampowered.com/app/105600/Terraria/">indie</a> <a href="https://store.steampowered.com/app/294100/RimWorld/">2d</a> <a href="https://store.steampowered.com/app/588650/Dead_Cells/">game</a> from the <a href="https://store.steampowered.com/app/262060/Darkest_Dungeon/">past</a> <a href="https://store.steampowered.com/app/311690/Enter_the_Gungeon/">several</a> <a href="https://store.steampowered.com/app/860950/Mark_of_the_Ninja_Remastered/">years</a> utilizing a 2d lighting system. I guess they just ... I don't know, saw that everyone was somehow managing to implement it on their own, and figured it wasn't that important?</p>
+<p>Another example is the striking lack of support for a good 2d lighting system. Unity only <em>very</em> recently <a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@12.0/manual/Lights-2D-intro.html">added support</a> for this, but it has terrible performance unless you&rsquo;re on a high-end graphics card, and it&rsquo;s only available on the Universal Render Pipeline, which comes with its own set of issues. This is in spite of <a href="https://www.hollowknight.com">every</a> <a href="http://www.celestegame.com">major</a> <a href="https://store.steampowered.com/app/105600/Terraria/">indie</a> <a href="https://store.steampowered.com/app/294100/RimWorld/">2d</a> <a href="https://store.steampowered.com/app/588650/Dead_Cells/">game</a> from the <a href="https://store.steampowered.com/app/262060/Darkest_Dungeon/">past</a> <a href="https://store.steampowered.com/app/311690/Enter_the_Gungeon/">several</a> <a href="https://store.steampowered.com/app/860950/Mark_of_the_Ninja_Remastered/">years</a> utilizing a 2d lighting system. I guess they just &hellip; I don&rsquo;t know, saw that everyone was somehow managing to implement it on their own, and figured it wasn&rsquo;t that important?</p>
 
-<p></p>
 
 <p>There are, of course, workarounds for this. But the more time you spend on workarounds, the less time you can spend on making cool content for your game.</p>
 
-<p></p>
 
-<h3>You're not coding, you're "scripting"</h3>
+<h3>You&rsquo;re not coding, you&rsquo;re &ldquo;scripting&rdquo;</h3>
 
-<p></p>
 
-<p>In Unity, you don't have access to the actual program that is running (the engine code). You only have access to scripts on objects. So if you want an arbitrary piece of code to run in a scene, you have to create a new GameObject in the scene you want and add your script to it. Oh, what's that? You want your code to run in <em>every</em> scene? Or maybe <em>before</em> the scene is loaded? Or pass data <em>between</em> scenes? Sorry, you can do that but it's always going to feel like weird, hacky workarounds and there are a ton of edge cases you're going to have to deal with. Have fun :)</p>
+<p>In Unity, you don&rsquo;t have access to the actual program that is running (the engine code). You only have access to scripts on objects. So if you want an arbitrary piece of code to run in a scene, you have to create a new GameObject in the scene you want and add your script to it. Oh, what&rsquo;s that? You want your code to run in <em>every</em> scene? Or maybe <em>before</em> the scene is loaded? Or pass data <em>between</em> scenes? Sorry, you can do that but it&rsquo;s always going to feel like weird, hacky workarounds and there are a ton of edge cases you&rsquo;re going to have to deal with. Have fun :)</p>
 
-<p></p>
 
-<p>You don't have full control over the program, how it runs, or how it's structured. You're just going to have to deal with it if you want to use Unity.</p>
+<p>You don&rsquo;t have full control over the program, how it runs, or how it&rsquo;s structured. You&rsquo;re just going to have to deal with it if you want to use Unity.</p>
 
-<p></p>
 
  <hr />
-<p></p>
 
 <p>So. The obvious question is now, <strong>why not just use a different engine?</strong> This, of course, led to my <strong>Quest for the Ultimate Game Engine,</strong> which I have been on for the past year or two, on and off.</p>
 
-<p></p>
 
 <h1>The other game engines</h1>
 
-<p></p>
 
-<p>The answer is that all the other game engines suck just a little more. Let's go through them, shall we?</p>
+<p>The answer is that all the other game engines suck just a little more. Let&rsquo;s go through them, shall we?</p>
 
-<p></p>
 
 <ul>
 <li><strong>Unreal</strong></li>
 </ul>
 
-<p></p>
 
-<p>Unreal Engine is completely 3d based. Also, it uses C++ which feels really ... primitive. I get that it's better for performance, and it's better for consoles, but as an indie developer I care more about the speed of iteration. And when I have to write a function signature in two separate files, and I'll get a compiler error if they don't match, I lose the will to continue reeeaal quick.</p>
+<p>Unreal Engine is completely 3d based. Also, it uses C++ which feels really &hellip; primitive. I get that it&rsquo;s better for performance, and it&rsquo;s better for consoles, but as an indie developer I care more about the speed of iteration. And when I have to write a function signature in two separate files, and I&rsquo;ll get a compiler error if they don&rsquo;t match, I lose the will to continue reeeaal quick.</p>
 
-<p></p>
 
 <ul>
 <li><strong>Godot</strong></li>
 </ul>
 
-<p></p>
 
-<p>GDScript is terrible. I refuse to use a language that I will only ever use for this one particular program. They do have C# support through Mono, which is cool. And it does have some other nice features, like first-class 2d support (<a href="https://docs.godotengine.org/en/stable/tutorials/2d/2d_lights_and_shadows.html">including 2d lighting!</a>). However, most of the rest of the engine feels pretty bad, and when I'm using it, I can't help but think, "this is just a crappier version of Unity!"</p>
+<p>GDScript is terrible. I refuse to use a language that I will only ever use for this one particular program. They do have C# support through Mono, which is cool. And it does have some other nice features, like first-class 2d support (<a href="https://docs.godotengine.org/en/stable/tutorials/2d/2d_lights_and_shadows.html">including 2d lighting!</a>). However, most of the rest of the engine feels pretty bad, and when I&rsquo;m using it, I can&rsquo;t help but think, &ldquo;this is just a crappier version of Unity!&rdquo;</p>
 
-<p></p>
 
-<p>Nothing against Godot as a project. I love that it's open source, and I hope they go a long ways. I just think that it's similar enough to Unity that it doesn't really solve my problems. It's quite editor-centric, everything is "scripting" rather than coding (maybe even more so than Unity), and it all feels more buggy and janky than Unity does, simply because it's open source rather than a big commercial project.</p>
+<p>Nothing against Godot as a project. I love that it&rsquo;s open source, and I hope they go a long ways. I just think that it&rsquo;s similar enough to Unity that it doesn&rsquo;t really solve my problems. It&rsquo;s quite editor-centric, everything is &ldquo;scripting&rdquo; rather than coding (maybe even more so than Unity), and it all feels more buggy and janky than Unity does, simply because it&rsquo;s open source rather than a big commercial project.</p>
 
-<p></p>
 
 <ul>
 <li><strong>GameMaker Studio</strong></li>
 </ul>
 
-<p></p>
 
-<p>From the outside, GMS seems really nice. Some really impressive 2d games have been made using it -- <a href="https://store.steampowered.com/app/257850/Hyper_Light_Drifter/">Hyper Light Drifter</a>, <a href="https://store.steampowered.com/app/242680/Nuclear_Throne/">Nuclear Throne</a>, and basically every other game from Vlambeer's catalog. And I actually did buy a 1-year copy of GMS on sale a few months back, so I've been trying it out. But I have to say that it feels like a step in the wrong direction. It has drag &amp; drop coding and a built-in sprite editor, which are both features intended very much for non-coders. Safe to say it is <em>highly</em> editor-centric. Not to mention that GameMaker Language is terrible. I repeat:</p>
+<p>From the outside, GMS seems really nice. Some really impressive 2d games have been made using it &ndash; <a href="https://store.steampowered.com/app/257850/Hyper_Light_Drifter/">Hyper Light Drifter</a>, <a href="https://store.steampowered.com/app/242680/Nuclear_Throne/">Nuclear Throne</a>, and basically every other game from Vlambeer&rsquo;s catalog. And I actually did buy a 1-year copy of GMS on sale a few months back, so I&rsquo;ve been trying it out. But I have to say that it feels like a step in the wrong direction. It has drag &amp; drop coding and a built-in sprite editor, which are both features intended very much for non-coders. Safe to say it is <em>highly</em> editor-centric. Not to mention that GameMaker Language is terrible. I repeat:</p>
 
-<p></p>
 
 <blockquote>
-  <p>I refuse to use a language that I will only ever use for this one particular program.</p>
+<p>I refuse to use a language that I will only ever use for this one particular program.</p>
 </blockquote>
 
-<p></p>
 
-<p>GML is actually worse than GDScript in a lot of ways. No inheritance, or functional programming, or even objects. This is my third point, "you're not coding, you're 'scripting'" turned all the way up to 11. No thank you.</p>
+<p>GML is actually worse than GDScript in a lot of ways. No inheritance, or functional programming, or even objects. This is my third point, &ldquo;you&rsquo;re not coding, you&rsquo;re &lsquo;scripting&rsquo;&rdquo; turned all the way up to 11. No thank you.</p>
 
-<p></p>
 
 <h3>The frameworks</h3>
 
-<p></p>
 
-<p>Game frameworks typically give you a lot more control over what you're creating, at the cost of not having an editor and having less tooling surrounding the process. I've tried several of them:</p>
+<p>Game frameworks typically give you a lot more control over what you&rsquo;re creating, at the cost of not having an editor and having less tooling surrounding the process. I&rsquo;ve tried several of them:</p>
 
-<p></p>
 
 <ul>
 <li><strong><a href="https://love2d.org">Love2d</a></strong></li>
 </ul>
 
-<p></p>
 
-<p>Love2d or LÖVE is pretty cool. It's nice for prototyping things. However, Lua gets <em>really</em> old for projects that last longer than a weekend. It's a fully dynamic language, which means:</p>
+<p>Love2d or LÖVE is pretty cool. It&rsquo;s nice for prototyping things. However, Lua gets <em>really</em> old for projects that last longer than a weekend. It&rsquo;s a fully dynamic language, which means:</p>
 
-<p></p>
 
  <div style="margin-left: 50px">
 <ul>
@@ -199,91 +167,72 @@
 </ul>
 
 <ul>
-<li>No types, so it's hard to have IDE support like autocomplete -- so any time you want to call a function, you're most likely going to have to look up the exact number and order of parameters, as well as the return value</li>
+<li>No types, so it&rsquo;s hard to have IDE support like autocomplete &ndash; so any time you want to call a function, you&rsquo;re most likely going to have to look up the exact number and order of parameters, as well as the return value</li>
 </ul>
 
  </div>
-<p></p>
 
-<p>Lua also has some other weird quirks. For example, array indices start at 1, the syntax seems extra verbose (you end up typing the words <code>function</code> and <code>end</code> a LOT), and for some reason there's no <code>+=</code> operator.</p>
+<p>Lua also has some other weird quirks. For example, array indices start at 1, the syntax seems extra verbose (you end up typing the words <code>function</code> and <code>end</code> a LOT), and for some reason there&rsquo;s no <code>+=</code> operator.</p>
 
-<p></p>
 
 <ul>
 <li><strong><a href="https://libgdx.com">LibGDX</a></strong></li>
 </ul>
 
-<p></p>
 
-<p>On paper, LibGDX is a match made in heaven. It's similar to Love2D in that it's only a framework, not a game engine, so I'm free to implement my own render pipeline exactly as I see fit. However, Java is obnoxiously verbose, and is missing a lot of the functionality of a more "modern" language like C#. Coroutines, stack-allocated structs, the <code>var</code> keyword, async/await, non-terrible interop with C/C++, it's all missing from Java.</p>
+<p>On paper, LibGDX is a match made in heaven. It&rsquo;s similar to Love2D in that it&rsquo;s only a framework, not a game engine, so I&rsquo;m free to implement my own render pipeline exactly as I see fit. However, Java is obnoxiously verbose, and is missing a lot of the functionality of a more &ldquo;modern&rdquo; language like C#. Coroutines, stack-allocated structs, the <code>var</code> keyword, async/await, non-terrible interop with C/C++, it&rsquo;s all missing from Java.</p>
 
-<p></p>
 
-<p>Kotlin is slightly better. But there's only so much they can do with a language that runs on the JVM. For instance, stack-allocated structs or multiple return values will simply never be supported because that's not a part of the JVM. And when you want to avoid allocating every frame for performance reasons, this results in some obnoxious, non-idiomatic coding practices. Kotlin also doesn't have HTML5 support at the moment. I assume that'll be remedied eventually, but for now it's just yet another turnoff for me from LibGDX.</p>
+<p>Kotlin is slightly better. But there&rsquo;s only so much they can do with a language that runs on the JVM. For instance, stack-allocated structs or multiple return values will simply never be supported because that&rsquo;s not a part of the JVM. And when you want to avoid allocating every frame for performance reasons, this results in some obnoxious, non-idiomatic coding practices. Kotlin also doesn&rsquo;t have HTML5 support at the moment. I assume that&rsquo;ll be remedied eventually, but for now it&rsquo;s just yet another turnoff for me from LibGDX.</p>
 
-<p></p>
 
 <ul>
 <li><strong><a href="https://www.monogame.net">Monogame</a>/<a href="https://fna-xna.github.io">FNA</a></strong></li>
 </ul>
 
-<p></p>
 
 <p>Monogame and FNA are both re-implementations of the <a href="https://en.wikipedia.org/wiki/Microsoft_XNA">Microsoft XNA</a> game libraries. Of this list, they seem the most promising to me. I have yet to <em>really</em> dig into them, though I have tried to use Monogame and it has a few issues.</p>
 
-<p></p>
 
-<p>The biggest issue to me is the lack of HTML5 export. I like to sometimes make small games and throw them up on <a href="https://itch.io">itch.io</a>. When you see a game on there and you have to download it, then get past all the obstacles your computer's OS tries to throw in front of you (Don't open this! It's malware! Are you sure you want to open it? Please go through one more extra step to open this just so you <em>really</em> know this is dangerous) it's a turn-off at best.</p>
+<p>The biggest issue to me is the lack of HTML5 export. I like to sometimes make small games and throw them up on <a href="https://itch.io">itch.io</a>. When you see a game on there and you have to download it, then get past all the obstacles your computer&rsquo;s OS tries to throw in front of you (Don&rsquo;t open this! It&rsquo;s malware! Are you sure you want to open it? Please go through one more extra step to open this just so you <em>really</em> know this is dangerous) it&rsquo;s a turn-off at best.</p>
 
-<p></p>
 
-<p>The other thing stems from the fact that both of these are re-implementations of older, proprietary, discontinued software -- using the APIs just <em>feels</em> off. For example, in order to load assets into your Monogame project, you have to "build" them using the "Monogame Content Builder." It's a standalone app where you just click your files and say "yes, I want these in my project." Oh and by the way, the standalone app <a href="https://github.com/MonoGame/MonoGame/issues/7513">doesn't work at all on mac</a> at the moment. Since Mac is my main development environment, this is another big turnoff.</p>
+<p>The other thing stems from the fact that both of these are re-implementations of older, proprietary, discontinued software &ndash; using the APIs just <em>feels</em> off. For example, in order to load assets into your Monogame project, you have to &ldquo;build&rdquo; them using the &ldquo;Monogame Content Builder.&rdquo; It&rsquo;s a standalone app where you just click your files and say &ldquo;yes, I want these in my project.&rdquo; Oh and by the way, the standalone app <a href="https://github.com/MonoGame/MonoGame/issues/7513">doesn&rsquo;t work at all on mac</a> at the moment. Since Mac is my main development environment, this is another big turnoff.</p>
 
-<p></p>
 
 <ul>
 <li><strong><a href="https://haxe.org">Haxe</a></strong></li>
 </ul>
 
-<p></p>
 
-<p>Haxe is interesting to me. It's not <em>really</em> its own programming language -- you're effectively coding for 5 different platforms at once, using a fairly leaky abstraction. It's flexible -- it has preprocessor defines if you want platform-specific behavior -- but it just <a href="https://trends.google.com/trends/explore?date=all&amp;geo=US&amp;q=%2Fm%2F0dbjtf,%2Fm%2F0dsbpg6">never took off</a>. It seems like the main group of people using Haxe are people who were really into ActionScript 3 (the langauge that was used for coding in Flash) and were able to make a smooth transition over to OpenFL. There are some other frameworks that seem alright and even have a few devoted users, but I could never really get into it.</p>
+<p>Haxe is interesting to me. It&rsquo;s not <em>really</em> its own programming language &ndash; you&rsquo;re effectively coding for 5 different platforms at once, using a fairly leaky abstraction. It&rsquo;s flexible &ndash; it has preprocessor defines if you want platform-specific behavior &ndash; but it just <a href="https://trends.google.com/trends/explore?date=all&amp;geo=US&amp;q=%2Fm%2F0dbjtf,%2Fm%2F0dsbpg6">never took off</a>. It seems like the main group of people using Haxe are people who were really into ActionScript 3 (the langauge that was used for coding in Flash) and were able to make a smooth transition over to OpenFL. There are some other frameworks that seem alright and even have a few devoted users, but I could never really get into it.</p>
 
-<p></p>
 
-<p>I think the main problem is just that the communities are all so small. This means that the tools aren't very mature, stuff breaks frequently, there aren't many tutorials, and if you get stuck it just isn't very easy to get help.</p>
+<p>I think the main problem is just that the communities are all so small. This means that the tools aren&rsquo;t very mature, stuff breaks frequently, there aren&rsquo;t many tutorials, and if you get stuck it just isn&rsquo;t very easy to get help.</p>
 
-<p></p>
 
 <p>There are other issues too, though. Since it compiles to things like JS and the JVM, it has inherited a lot of the sloppy memory-management patterns of those platforms. Also, despite compiling to a dozen different languages, the actual process of integrating it with any native libraries in those languages remains mysterious and complicated. It kinda seems like in order to succeed with Haxe, you need to live in France and be buddies with <a href="https://github.com/ncannasse">Nicolas Cannasse</a>.</p>
 
-<p></p>
 
 <ul>
 <li><strong><a href="https://luxeengine.com">Luxe</a></strong></li>
 </ul>
 
-<p></p>
 
-<p>This honestly looks <em>amazing</em>. The only problem is ... it's not released yet. So I can't use it.</p>
+<p>This honestly looks <em>amazing</em>. The only problem is &hellip; it&rsquo;s not released yet. So I can&rsquo;t use it.</p>
 
-<p></p>
 
 <h3>Sounds like you just want to write your own game engine.</h3>
 
-<p></p>
 
-<p>Yeah, I guess you're right.</p>
+<p>Yeah, I guess you&rsquo;re right.</p>
 
-<p></p>
 
 <p>I have toyed with this a bit, and even got decently far with writing my own C++ game framework. I ditched it after realizing (again) how terrible C++ is to work with, but at some point I would like to try again with something like Rust or C#.</p>
 
-<p></p>
 
-<p>That's so much <em>work</em> though. I just want to boot up a game engine that</p>
+<p>That&rsquo;s so much <em>work</em> though. I just want to boot up a game engine that</p>
 
-<p></p>
 
  <div style="margin-left: 50px">
 <ul>
@@ -307,7 +256,7 @@
 </ul>
 
 <ul>
-<li>isn't editor-centric</li>
+<li>isn&rsquo;t editor-centric</li>
 </ul>
 
 <ul>
@@ -315,25 +264,9 @@
 </ul>
 
  </div>
-<p></p>
 
 <p><strong>Is that so much to ask???</strong></p>
 </div>
         
-<div id="disqus_thread"></div>
-<script>
-    var disqus_config = function () {
-        this.page.url = location.href;
-        this.page.identifier = 'ultimate-game-engine';
-    };
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://janpaulwebsite.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
     </body>
 </html>

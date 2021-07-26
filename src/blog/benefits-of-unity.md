@@ -68,4 +68,4 @@ I'm _pretty_ sure Unity is the most popular game engine out there. It definitely
 
 It's fine, I know how to use it, and I know how to find help when I'm stuck. That's pretty much all this boils down to.
 
-I do still want to fiddle with other engines -- I just got accepted into the Luxe closed beta! -- and hope to make more progress on my own custom game engine at some point. But these are the reasons I've stuck with Unity so far.
+I do still want to fiddle with other engines -- I just got accepted into the [Luxe](https://luxeengine.com/) closed beta! -- and hope to make more progress on my own custom game engine at some point. But these are the reasons I've stuck with Unity so far.
