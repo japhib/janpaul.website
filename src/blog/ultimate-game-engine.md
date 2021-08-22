@@ -101,6 +101,8 @@ There are other issues too, though. Since it compiles to things like JS and the 
 
 This honestly looks *amazing*. The only problem is ... it's not released yet. So I can't use it.
 
+**Update, July 2021:** I got accepted into the Luxe closed beta! I'll make a post about it soon.
+
 ### Sounds like you just want to write your own game engine.
 
 Yeah, I guess you're right.
