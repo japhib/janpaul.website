@@ -48,7 +48,7 @@ def render(content, context, filename):
     context['head'] = chevron.render(head, context)
     context['header'] = header
     rendered = chevron.render(template, context)
-    with open("public/" + filename, 'w') as file:
+    with open("../" + filename, 'w') as file:
         file.write(rendered)
 
 blogposts = []
