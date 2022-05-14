@@ -1,6 +1,6 @@
 // <div class="centered">
 
-# Jan's web site title
+# Jan's web site
 
 // <img src="/img/profile.jpg" style="width: 30%" />
 
@@ -16,8 +16,8 @@ by 🌜 night 🦇
 
 ### Welcome to the digital projection of my corporeal being
 
-// <div class="centered">I hope it's nice</div>
-// <div class="centered" style="margin-top: 1em; font-size: .6em">(it has a mind of its own)</div>
+<!-- // <div class="centered">I hope it's nice</div>
+// <div class="centered" style="margin-top: 1em; font-size: .6em">(it has a mind of its own)</div> -->
 
 // &nbsp;
 
