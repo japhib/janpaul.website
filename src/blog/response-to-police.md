@@ -19,7 +19,7 @@ However, I truly believe that any of these ideas, if implemented, would result i
 
 # Re: Defunding the Police
 
-## Fallacy #1: the police prevent crime
+## Fallacy: the police prevent crime
 
 Let's get one thing out of the way right out of the gate:
 
@@ -33,7 +33,7 @@ Lincoln said this:
 
 But police do not make crime victims stronger. They do not make crime victims more of a threat. They do hopefully do their best to catch criminals after the fact, although in many cases (e.g. mass murder) catching the criminal and inflicting even the harshest penalty possible (i.e. the death penalty) does not even begin to right the wrong that has been done.
 
-## Solution #1: social programs _do_ reduce crime
+## Solution: social programs _do_ prevent crime
 
 "Defund the police" generally doesn't mean financially crippling the police, so much that they just can't operate at all. It means taking part of the usually-oversized police budgets and putting that money towards social programs.
 
@@ -79,9 +79,9 @@ However, restricting abortion access [doesn't actually lower the rates of aborti
 
 What _does_ decrease the amount of abortions is solving the underlying issue, which is that people have unprotected sex when they don't actually want to get pregnant. This is solved by:
 
-1. Sex education (other than abstinence-only)
-2. Access to birth control
-3. Making it easier to raise a baby with stuff like child tax credits, child care subsidies, low-cost or free health insurance, etc.
+- Sex education (other than abstinence-only)
+- Access to birth control
+- Making it easier to raise a baby with stuff like child tax credits, child care subsidies, low-cost or free health insurance, etc.
 
 # The American Dream
 
