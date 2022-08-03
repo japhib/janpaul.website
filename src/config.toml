@@ -1,0 +1,23 @@
+baseURL = 'https://janpaul.website/'
+languageCode = 'en-us'
+title = 'WWW.JanPaul.COM.NET.BIZ/janpaulthoughts'
+theme = "archie"
+copyright = "© JanPaul Bergeson"
+
+[params]
+    mode = "toggle"
+
+[[params.social]]
+name = "GitHub"
+icon = "github"
+url = "https://github.com/japhib/"
+
+[[params.social]]
+name = "Twitter"
+icon = "twitter"
+url = "https://twitter.com/residentJan"
+
+[[params.social]]
+name = "LinkedIn"
+icon = "linkedin"
+url = "https://www.linkedin.com/in/janpaul-bergeson-b4552991/"

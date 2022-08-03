@@ -1,0 +1,46 @@
+{{ define "main" }}
+<main aria-role="main">
+  <header class="homepage-header">
+
+    {{ with .Params.title }}
+        <h1>{{.Title}}</h1>
+    {{ end }}
+
+    {{ with .Params.subtitle }}
+        <span class="subtitle">{{.}}</span>
+    {{ end }}
+
+  </header>
+  <div class="homepage-content">
+    {{.Content}}
+  </div>
+
+    <br />
+    <hr />
+
+    <main class="list">
+        <h1>
+            Blog Posts
+        </h1>
+        
+        {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+        {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
+        {{ range $paginator.Pages }}
+        <section class="list-item">
+            <h3 class="title"><a href="{{ .RelPermalink }}">{{.Title}}</a></h3>
+            <time>{{ dateFormat "Jan 2, 2006" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</time>
+            <br><div class="description">
+                {{ if isset .Params "description" }}
+                {{ .Description }}
+                {{ else }}
+                {{ .Summary }}&hellip;
+                {{ end }}
+            </div>
+            <a class="readmore" href="{{ .RelPermalink }}">Read more ⟶</a>
+        </section>
+        {{ end }}
+        {{ template "partials/paginator.html" . }}
+    </main>
+
+</main>
+{{ end }}

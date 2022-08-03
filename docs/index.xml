@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WWW.JanPaul.COM.NET.BIZ/janpaulthoughts</title>
+    <link>https://janpaul.website/</link>
+    <description>Recent content on WWW.JanPaul.COM.NET.BIZ/janpaulthoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© JanPaul Bergeson</copyright>
+    <lastBuildDate>Wed, 03 Aug 2022 10:37:40 -0600</lastBuildDate><atom:link href="https://janpaul.website/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unity: the Good Parts</title>
+      <link>https://janpaul.website/blog/benefits-of-unity/</link>
+      <pubDate>Mon, 19 Jul 2021 12:00:00 -0600</pubDate>
+      
+      <guid>https://janpaul.website/blog/benefits-of-unity/</guid>
+      <description>In my last post, I detailed all the many reasons why I dislike Unity and find it frustrating to work with. Despite all those reasons, I&amp;rsquo;ve released a commercial game built with Unity and am close to releasing a second. That amounts to several years of working with Unity &amp;ndash; if I hate it so much, why haven&amp;rsquo;t I bailed before now?
+Well, the reason is that the good parts of Unity outweigh the costs for me.</description>
+    </item>
+    
+    <item>
+      <title>The quest for the Ultimate Game Engine</title>
+      <link>https://janpaul.website/blog/ultimate-game-engine/</link>
+      <pubDate>Thu, 03 Jun 2021 12:00:00 -0600</pubDate>
+      
+      <guid>https://janpaul.website/blog/ultimate-game-engine/</guid>
+      <description>I&amp;rsquo;ve been using Unity for about 4 years now. I&amp;rsquo;ve even used it to develop a couple of commercial projects. So obviously, it can get the job done. It has a huge community and there are tons of high-quality tutorials online. It appears to be the most-used game engine among indies and hobbyists. And best of all, it&amp;rsquo;s free.
+&amp;hellip; so what&amp;rsquo;s my gripe with it?
+A lot of things, really.</description>
+    </item>
+    
+  </channel>
+</rss>
