@@ -60,6 +60,8 @@ Nothing against Godot as a project. I love that it's open source, and I hope the
 > **Edit August 2022:** I've actually played with GDScript a fair amount since writing this post and I've changed my mind about it. I think that as long as you're scripting the engine, rather than writing code from scratch, it's actually really nice. It has a level of integration with the editor that is impossible if you're using an existing programming language.
 >
 > In short, I've started to understand [some of the reasons](https://docs.godotengine.org/en/stable/about/faq.html#what-is-gdscript-and-why-should-i-use-it) the creators of Godot give for making a new scripting language.
+>
+> **Added September 2022:** Made a whole blog post with [my thoughts about GDScript](/blog/revisiting-godot/).
 
 - **GameMaker Studio**
 

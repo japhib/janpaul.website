@@ -13,21 +13,22 @@ For my day job, I work as a backend engineer for [Divvy](https://getdivvy.com/ho
 
 I'm also one half of [Pollywog Games](https://pollywog.games/), where I make mobile strategy games as a hobby.
 
-## Social
+## My Commercial Games
 
-[GitHub](https://github.com/japhib/)
+ - [Barnard's Star](https://pollywog.games/barnards-star.html) - multiplayer turn-based tactical games
+ - [Card Crusade](https://pollywog.games/card-crusade.html) - roguelike deckbuilder
 
-[Twitter](https://twitter.com/residentJan)
+## Open Source Projects
 
-[LinkedIn](https://www.linkedin.com/in/janpaul-bergeson-b4552991/)
+ - [PICO-8 LS](https://github.com/japhib/pico8-ls) - a language server for the [PICO-8](https://www.lexaloffle.com/pico-8.php) dialect of Lua
 
-## Games
-
-[Barnard's Star](https://pollywog.games/barnards-star.html) - multiplayer turn-based tactical games
-
-[Card Crusade](https://pollywog.games/card-crusade.html) - roguelike deckbuilder
-
-### Other little projects
+## Other little projects
 
  - [itch.io](https://janpaul.itch.io/)
  - [ShaderToy](https://www.shadertoy.com/user/jamp)
+
+## Social
+
+ - [GitHub](https://github.com/japhib/)
+ - [Twitter](https://twitter.com/residentJan)
+ - [LinkedIn](https://www.linkedin.com/in/janpaul-bergeson-b4552991/)

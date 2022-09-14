@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Revisiting Godot: GDScript - WWW.JanPaul.COM.NET.BIZ/janpaulthoughts</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Godot (pronounced &ldquo;guh-DOE&rdquo;) is a fully open-source game engine that aims to compete with giants like Unity and Unreal. I&rsquo;ve written about it in the past, and at that time I was pretty harsh:
+GDScript is terrible. I refuse to use a language that I will only ever use for this one particular program. They do have C# support through Mono, which is cool. And it does have some other nice features, like first-class 2d support (including 2d lighting!" />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Revisiting Godot: GDScript" />
+<meta property="og:description" content="Godot (pronounced &ldquo;guh-DOE&rdquo;) is a fully open-source game engine that aims to compete with giants like Unity and Unreal. I&rsquo;ve written about it in the past, and at that time I was pretty harsh:
+GDScript is terrible. I refuse to use a language that I will only ever use for this one particular program. They do have C# support through Mono, which is cool. And it does have some other nice features, like first-class 2d support (including 2d lighting!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://janpaul.website/blog/revisiting-godot/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2022-09-14T10:05:48-06:00" />
+<meta property="article:modified_time" content="2022-09-14T10:05:48-06:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Revisiting Godot: GDScript"/>
+<meta name="twitter:description" content="Godot (pronounced &ldquo;guh-DOE&rdquo;) is a fully open-source game engine that aims to compete with giants like Unity and Unreal. I&rsquo;ve written about it in the past, and at that time I was pretty harsh:
+GDScript is terrible. I refuse to use a language that I will only ever use for this one particular program. They do have C# support through Mono, which is cool. And it does have some other nice features, like first-class 2d support (including 2d lighting!"/>
+<script src="https://janpaul.website/js/feather.min.js"></script>
+	
+	
+        <link href="https://janpaul.website/css/fonts.b685ac6f654695232de7b82a9143a46f9e049c8e3af3a21d9737b01f4be211d1.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://janpaul.website/css/main.407cc87595cb2112dd8ec5b32fc875860e2bfb7a8f173c4d8059715c2e667aaa.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://janpaul.website/css/dark.cd9410acc69b3fe19470dd8d49740496761f49b8b3cec38aee3fc9fcba1d6be2.css"  disabled />
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://janpaul.website/">WWW.JanPaul.COM.NET.BIZ/janpaulthoughts</a>
+	</div>
+	<nav>
+		
+		| <a id="dark-mode-toggle" onclick="toggleTheme()" href=""></a>
+		<script src="https://janpaul.website/js/themetoggle.js"></script>
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Revisiting Godot: GDScript</h1>
+            
+            
+                <div><i>So far, this blog has exclusively been about game engines. Why stop now?</i></div>
+                <div>&nbsp;</div>
+            
+
+			<div class="meta">Posted on Sep 14, 2022</div>
+		</div>
+		
+
+		<section class="body">
+			<p><a href="https://godotengine.org/">Godot</a> (pronounced &ldquo;guh-DOE&rdquo;) is a <a href="https://github.com/godotengine/godot">fully open-source</a> game engine that aims to compete with giants like Unity and Unreal. I&rsquo;ve written about it <a href="/blog/ultimate-game-engine/">in the past</a>, and at that time I was pretty harsh:</p>
+<blockquote>
+<p>GDScript is terrible. I refuse to use a language that I will only ever use for this one particular program. They do have C# support through Mono, which is cool. And it does have some other nice features, like first-class 2d support (including 2d lighting!). However, most of the rest of the engine feels pretty bad, and when I’m using it, I can’t help but think, “this is just a crappier version of Unity!”</p>
+</blockquote>
+<p>However, when I wrote that, I had only played with Godot a tiny bit. Since then, I&rsquo;ve fiddled around with it a bit more, and I have to admit that it&rsquo;s a lot nicer than I gave it credit for.</p>
+<h1 id="gdscript">GDScript</h1>
+<p>GDScript is the main scripting language that Godot supports. GDScript is a Python-like language, with some <a href="https://docs.godotengine.org/en/stable/about/faq.html#what-is-gdscript-and-why-should-i-use-it">Godot-specific innovations</a>:</p>
+<ol>
+<li><strong>Threading support</strong> (a rarity in dynamic scripting languages such as Python and Lua)</li>
+<li>Simple and straightforward <strong>C++ bindings</strong>, including the ability to <strong>extend C++ classes</strong> - object-orientation is a staple of Godot&rsquo;s architecture</li>
+<li><strong>Native, value-based vector types</strong> (Vector3, Matrix4). Typical scripting languages like Lua, Python, and Javascript only support reference-based user classes, which generates a lot of garbage</li>
+<li>Memory management using <strong>reference counting</strong> rather than garbage collection, eliminating unpredictable GC pauses</li>
+<li>Tight IDE integration - Godot has an <strong>embedded GDScript code editor</strong>, providing in-editor docs, code completion (for <em>your project&rsquo;s</em> assets!), live editing, and other tools</li>
+</ol>
+<p>In my <a href="/blog/ultimate-game-engine/">other blog post</a> I <em>specifically</em> lamented the lack of value types in languages such as Java, Javascript, and Lua. GDScript directly fixes that flaw.</p>
+<p>Another rant I had in that blog post was that in Unity, &ldquo;you&rsquo;re not coding, you&rsquo;re &lsquo;scripting&rsquo;.&rdquo; Godot actually leans into this with GDScript by making the scripting language itself very lightweight, and tightly integrated with the engine. IMO this is a better solution. It&rsquo;s easy and fast to make a new GDScript script &ndash; you don&rsquo;t even have to wait for it to compile! Plus, it makes it very clear that you&rsquo;re not using regular C#, you&rsquo;re using a language specific to this game engine.</p>
+<p>There are some situations where I still wouldn&rsquo;t use GDScript. For example, if I were to make a game like <a href="https://pollywog.games/barnards-star.html">Barnard&rsquo;s Star</a> where I needed to run the game logic on a server outside of the game engine, I&rsquo;d use C# instead. I don&rsquo;t believe there&rsquo;s any way to run GDScript outside of Godot Engine itself.</p>
+<p>To sum up, when I actually gave GDScript a chance, it quickly became clear that it&rsquo;s a well-thought-out language that solves a lot of problems.</p>
+<h1 id="godot-the-future">Godot: the future???</h1>
+<p>Godot is far from perfect, but I love that it&rsquo;s open source. Unity has served us well enough, but with all its warts, I&rsquo;d love to try something else out for a change. My current project, Barnard&rsquo;s Star, is much too far gone to switch engines at this point &ndash; I&rsquo;ve got 20k lines of Unity-specific C#, and another 30k+ lines of game logic C#. But next time I start a new project, I&rsquo;d love to start it on Godot!</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			
+		</div>
+	</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/japhib/" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a><a class="soc" href="https://twitter.com/residentJan" title="Twitter"><i data-feather="twitter"></i></a>
+    <a class="border"></a><a class="soc" href="https://www.linkedin.com/in/janpaul-bergeson-b4552991/" title="LinkedIn"><i data-feather="linkedin"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2022  © JanPaul Bergeson |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>
