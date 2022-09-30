@@ -4,6 +4,12 @@ title = 'WWW.JanPaul.COM.NET.BIZ/janpaulthoughts'
 theme = "archie"
 copyright = "© JanPaul Bergeson"
 
+# Allow putting HTML directly into the markdown files
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [params]
     mode = "toggle"
 

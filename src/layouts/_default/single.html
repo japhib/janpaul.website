@@ -17,6 +17,13 @@
 			{{ .Params.tldr }}
 		</div>{{ end }}
 
+		<div class="table-of-contents">
+			<strong>Contents</strong>
+			<div id="contents">
+				{{ .TableOfContents }}
+			</div>
+		</div>
+
 		<section class="body">
 			{{ .Content }}
 		</section>
